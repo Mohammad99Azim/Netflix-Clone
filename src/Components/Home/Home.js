@@ -1,5 +1,8 @@
 import { useState,useEffect} from "react";
 import MovieList from '../MovieList/MovieList'
+import Navbarr from "../Navbar/Navbar";
+
+
 export default function Home(){
     const [movies, setMovies] = useState([]);
 
@@ -21,8 +24,8 @@ useEffect(() => {
 
 return (
     <>
-    <h1>All Movies</h1>
-    <p>Wait for results</p>
+        <Navbarr />
+        <br/>
       { 
         (movies.length>0) && <MovieList allMovie = {movies} />
       }
