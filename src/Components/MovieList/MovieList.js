@@ -6,7 +6,7 @@ export default function MovieList(props){
         <>
         {
             props.allMovie.map((move)=>{
-                return <Movie movieData={move} />
+                return <Movie key={move.id} movieData={move} />
             })
         }
         
